@@ -1,12 +1,13 @@
-variable "cluster_name" {
-  type = string
+variable "clusters" {
+  type = list(object({
+    name               = string
+    kubernetes_version = string
+    node_count         = number
+    vm_size            = string
+  }))
 }
 
 variable "environment" {
-  type = string
-}
-
-variable "kubernetes_version" {
   type = string
 }
 

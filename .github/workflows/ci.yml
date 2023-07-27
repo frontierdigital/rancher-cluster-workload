@@ -1,0 +1,16 @@
+---
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    uses: frontierdigital/shared-workflows/.github/workflows/terraform-workload.yml@v1.0.0-pre.d65160a
+    with:
+      workloadName: rancher-cluster
+    secrets:
+      armClientId: ${{ secrets.ARM_CLIENT_ID }}
+      armClientSecret: ${{ secrets.ARM_CLIENT_SECRET }}
