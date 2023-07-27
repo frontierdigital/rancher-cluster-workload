@@ -1,8 +1,8 @@
 clusters = [
   {
     name               = "foo"
-    kubernetes_version = "1.25.5"
-    node_count         = 3
+    kubernetes_version = "1.25.11"
+    node_count         = 1
     vm_size            = "Standard_D2s_v3"
   }
 ]
