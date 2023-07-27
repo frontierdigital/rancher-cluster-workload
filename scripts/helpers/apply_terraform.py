@@ -1,5 +1,7 @@
+import json
 import os
 import shutil
+from helpers.exec import exec
 from helpers.get_short_region import get_short_region
 from helpers.get_terraform_state_config import get_terraform_state_config
 from python_terraform import Terraform
@@ -97,6 +99,12 @@ def apply_terraform(
     # File "/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/json/decoder.py", line 355, in raw_decode
     #     raise JSONDecodeError("Expecting value", s, err.value) from None
     # json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+
+    out = exec(
+        command="terraform output -json",
+        opts={"cwd": working_dir},
+    )
+    return json.loads(out[0].decode("utf-8"))
 
 
 def _test():
