@@ -1,0 +1,15 @@
+# ide
+.env
+.vscode
+
+# internal
+.config
+
+# python
+.venv
+__pycache__
+
+# terraform
+.terraform
+
+# other
