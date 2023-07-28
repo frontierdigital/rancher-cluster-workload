@@ -3,6 +3,7 @@
 [![CI](https://github.com/frontierdigital/rancher-cluster-workload/actions/workflows/ci.yml/badge.svg)](https://github.com/frontierdigital/rancher-cluster-workload/actions/workflows/ci.yml)
 
 ## About
+Deploys Rancher Kubernetes clusters on [Azure Kubernetes Service](https://azure.microsoft.com/en-gb/products/kubernetes-service), including integration into Microsoft Entra ID (Azure AD), Azure Monitor and Microsoft Defender for Cloud.
 
 ## Requirements
 ### Python
