@@ -4,6 +4,13 @@
 
 ## About
 
+## Requirements
+### Python
+See the [.python-version](.python-version) file.
+
+### Terraform
+See the [.tfswitchrc](.tfswitchrc) file.
+
 ## Test
 ```sh
 INCLUDE_DEV=true make install
